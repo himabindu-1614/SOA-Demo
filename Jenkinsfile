@@ -7,7 +7,7 @@ pipeline {
     }
 
     environment {
-        TOMCAT_URL = 'http://localhost:8081/manager/text'
+        TOMCAT_URL = 'http://localhost:9090/manager/text'
         TOMCAT_USER = 'admin'
         TOMCAT_PASS = 'admin'
         WAR_FILE = 'target/demo-0.0.1-SNAPSHOT.war'
@@ -17,7 +17,7 @@ pipeline {
 
         stage('Clone') {
             steps {
-                git url: 'https://github.com/srithars/web-app1.git',
+                git url: 'https://github.com/himabindu-1614/SOA-Demo.git',
                     branch: 'main'
             }
         }
